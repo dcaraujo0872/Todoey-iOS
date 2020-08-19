@@ -76,11 +76,8 @@ class CategoryViewController: UITableViewController {
         } catch {
             print("Could not persist category '\(name)' to database. Error: \(error)")
         }
-        if let index = categories.index(of: category) {
-            DispatchQueue.main.async {
-                let indexPath = IndexPath(row: index, section: 0)
-                self.tableView.insertRows(at: [indexPath], with: .automatic)
-            }
+        if let row = categories.index(of: category) {
+            insertRow(row, inSection: 0)
         }
     }
 }

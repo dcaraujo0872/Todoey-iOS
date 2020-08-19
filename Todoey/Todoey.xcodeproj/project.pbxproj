@@ -12,15 +12,17 @@
 		CF3B4F5924EC321B000546C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF3B4F5724EC321B000546C9 /* Main.storyboard */; };
 		CF3B4F5B24EC321C000546C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF3B4F5A24EC321C000546C9 /* Assets.xcassets */; };
 		CF3B4F5E24EC321C000546C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF3B4F5C24EC321C000546C9 /* LaunchScreen.storyboard */; };
-		CF3B4F6924EC321C000546C9 /* TodoeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3B4F6824EC321C000546C9 /* TodoeyTests.swift */; };
 		CF3B4F7724EC3294000546C9 /* TodosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3B4F7624EC3294000546C9 /* TodosViewController.swift */; };
 		CF3B4F7A24EC33E2000546C9 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CF3B4F7924EC33E2000546C9 /* RealmSwift */; };
 		CF3B4F7C24EC3484000546C9 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3B4F7B24EC3484000546C9 /* CategoryViewController.swift */; };
 		CF3B4F7E24EC3591000546C9 /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3B4F7D24EC3591000546C9 /* ViewConstants.swift */; };
 		CF3B4F8024EC36E3000546C9 /* TodoCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3B4F7F24EC36E3000546C9 /* TodoCategory.swift */; };
 		CF3B4F8224EC3719000546C9 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3B4F8124EC3719000546C9 /* Todo.swift */; };
-		CF3B4F8724EC3C01000546C9 /* UIAlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3B4F8624EC3C01000546C9 /* UIAlertControllerExtensions.swift */; };
+		CF3B4F8724EC3C01000546C9 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3B4F8624EC3C01000546C9 /* UIKitExtensions.swift */; };
 		CF3B4F8924EC4033000546C9 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3B4F8824EC4033000546C9 /* StringExtensions.swift */; };
+		CF746BBB24ED1D22004F2C8F /* RealmExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF746BBA24ED1D22004F2C8F /* RealmExtensions.swift */; };
+		CF746BBE24ED2199004F2C8F /* StringExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF746BBD24ED2199004F2C8F /* StringExtensionsTests.swift */; };
+		CF746BBF24ED21D4004F2C8F /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3B4F8824EC4033000546C9 /* StringExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,15 +44,16 @@
 		CF3B4F5D24EC321C000546C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF3B4F5F24EC321C000546C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF3B4F6424EC321C000546C9 /* TodoeyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoeyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF3B4F6824EC321C000546C9 /* TodoeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoeyTests.swift; sourceTree = "<group>"; };
 		CF3B4F6A24EC321C000546C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF3B4F7624EC3294000546C9 /* TodosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosViewController.swift; sourceTree = "<group>"; };
 		CF3B4F7B24EC3484000546C9 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		CF3B4F7D24EC3591000546C9 /* ViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstants.swift; sourceTree = "<group>"; };
 		CF3B4F7F24EC36E3000546C9 /* TodoCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCategory.swift; sourceTree = "<group>"; };
 		CF3B4F8124EC3719000546C9 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
-		CF3B4F8624EC3C01000546C9 /* UIAlertControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertControllerExtensions.swift; sourceTree = "<group>"; };
+		CF3B4F8624EC3C01000546C9 /* UIKitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
 		CF3B4F8824EC4033000546C9 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		CF746BBA24ED1D22004F2C8F /* RealmExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmExtensions.swift; sourceTree = "<group>"; };
+		CF746BBD24ED2199004F2C8F /* StringExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +112,7 @@
 		CF3B4F6724EC321C000546C9 /* TodoeyTests */ = {
 			isa = PBXGroup;
 			children = (
-				CF3B4F6824EC321C000546C9 /* TodoeyTests.swift */,
+				CF746BBC24ED2141004F2C8F /* Extensions */,
 				CF3B4F6A24EC321C000546C9 /* Info.plist */,
 			);
 			path = TodoeyTests;
@@ -145,8 +148,17 @@
 		CF3B4F8324EC3B9D000546C9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				CF3B4F8624EC3C01000546C9 /* UIAlertControllerExtensions.swift */,
+				CF3B4F8624EC3C01000546C9 /* UIKitExtensions.swift */,
 				CF3B4F8824EC4033000546C9 /* StringExtensions.swift */,
+				CF746BBA24ED1D22004F2C8F /* RealmExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CF746BBC24ED2141004F2C8F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CF746BBD24ED2199004F2C8F /* StringExtensionsTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -261,9 +273,10 @@
 				CF3B4F7E24EC3591000546C9 /* ViewConstants.swift in Sources */,
 				CF3B4F7C24EC3484000546C9 /* CategoryViewController.swift in Sources */,
 				CF3B4F8924EC4033000546C9 /* StringExtensions.swift in Sources */,
+				CF746BBB24ED1D22004F2C8F /* RealmExtensions.swift in Sources */,
 				CF3B4F7724EC3294000546C9 /* TodosViewController.swift in Sources */,
 				CF3B4F8224EC3719000546C9 /* Todo.swift in Sources */,
-				CF3B4F8724EC3C01000546C9 /* UIAlertControllerExtensions.swift in Sources */,
+				CF3B4F8724EC3C01000546C9 /* UIKitExtensions.swift in Sources */,
 				CF3B4F5224EC321B000546C9 /* AppDelegate.swift in Sources */,
 				CF3B4F5424EC321B000546C9 /* SceneDelegate.swift in Sources */,
 				CF3B4F8024EC36E3000546C9 /* TodoCategory.swift in Sources */,
@@ -274,7 +287,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF3B4F6924EC321C000546C9 /* TodoeyTests.swift in Sources */,
+				CF746BBF24ED21D4004F2C8F /* StringExtensions.swift in Sources */,
+				CF746BBE24ED2199004F2C8F /* StringExtensionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -3,14 +3,25 @@ import RealmSwift
 
 class TodosViewController: UITableViewController {
     
+    @IBOutlet weak var todoSearchBar: UISearchBar!
+    
     private let realm = try! Realm()
     private var todos: Results<Todo>?
     
     var category: TodoCategory! {
         didSet {
             title = category.name
-            todos = realm.objects(Todo.self).sortedByCreationDateDescending
+            populateTableView(with: allTodos)
         }
+    }
+    
+    private var allTodos: Results<Todo> {
+        return category.todos.sortedByCreationDateDescending
+    }
+    
+    private func populateTableView(with todos: Results<Todo>) {
+        self.todos = todos
+        reloadTableViewOnMainQueue()
     }
     
     // MARK: - Table view data source
@@ -40,7 +51,7 @@ class TodosViewController: UITableViewController {
             }
             tableView.reloadRows(at: [indexPath], with: .automatic)
         } catch {
-            print("")
+            print("Could not toggle todo '\(todo.title)'. Error: \(error)")
         }
     }
     
@@ -82,11 +93,31 @@ class TodosViewController: UITableViewController {
         } catch {
             print("Could not add todo '\(title)' to '\(category.name)'. Error: \(error)")
         }
-        if let index = todos?.index(of: todo) {
-            DispatchQueue.main.async {
-                let indexPath = IndexPath(row: index, section: 0)
-                self.tableView.insertRows(at: [indexPath], with: .automatic)
-            }
+        if let row = todos?.index(of: todo) {
+            insertRow(row, inSection: 0)
+        }
+    }
+}
+
+extension TodosViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if let search = searchBar.text, search.hasValue {
+            populateTableView(with: category.todos.containing(search))
+        }
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text?.isEmpty ?? true {
+            dismissSearchBar()
+            populateTableView(with: allTodos)
+        }
+    }
+    
+    private func dismissSearchBar() {
+        DispatchQueue.main.async {
+            self.todoSearchBar.text = nil
+            self.todoSearchBar.resignFirstResponder()
         }
     }
 }

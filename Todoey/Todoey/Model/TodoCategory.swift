@@ -15,19 +15,6 @@ extension TodoCategory {
     }
 }
 
-extension Realm {
-    
-    func destroy<T: Object>(_ obj: T) {
-        do {
-            try write {
-                self.delete(obj)
-            }
-        } catch {
-            print("Could not delete object of type \(String(describing: obj.self))")
-        }
-    }
-}
-
 extension Results where Element == TodoCategory {
     
     var sortedByNameAscending: Results<TodoCategory> {

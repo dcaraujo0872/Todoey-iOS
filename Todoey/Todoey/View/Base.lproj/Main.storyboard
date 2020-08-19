@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,7 +13,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="o0Y-la-Rza">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoryItem" id="6NH-qd-NIa">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
@@ -23,7 +22,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" name="BackgroundColor"/>
                                 <connections>
                                     <segue destination="0ng-Cp-Lm8" kind="show" identifier="showTodos" id="hu0-ty-OWO"/>
                                 </connections>
@@ -36,7 +34,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Todoey" id="pW9-Wt-NP5">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="YP0-Rm-b1s">
-                            <color key="tintColor" name="AccentColor"/>
                             <connections>
                                 <action selector="addNewCategory:" destination="UZa-KV-KQC" id="X5f-CH-WOh"/>
                             </connections>
@@ -54,16 +51,23 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZWW-cw-HcB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="yqK-Lp-8q7">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="0ng-Cp-Lm8" id="x0B-oJ-Cw9"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="todoItem" id="9YV-2O-XRc">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="72" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9YV-2O-XRc" id="X8d-o7-2uL">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" name="BackgroundColor"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -73,12 +77,14 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="7Du-KT-uQp">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="zsx-a4-Dzr">
-                            <color key="tintColor" name="AccentColor"/>
                             <connections>
                                 <action selector="addNewTodo:" destination="0ng-Cp-Lm8" id="ann-pd-GxE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="todoSearchBar" destination="yqK-Lp-8q7" id="Ic5-b6-YMC"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K95-sB-E0Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -92,10 +98,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Zk5-HW-QW9">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" name="AccentColor"/>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" name="HeadingColor"/>
-                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -107,15 +109,4 @@
             <point key="canvasLocation" x="-18.840579710144929" y="75.669642857142847"/>
         </scene>
     </scenes>
-    <resources>
-        <namedColor name="AccentColor">
-            <color red="0.2627450980392157" green="0.54117647058823526" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="BackgroundColor">
-            <color red="0.96862745098039216" green="0.98431372549019602" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="HeadingColor">
-            <color red="0.2627450980392157" green="0.43529411764705883" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-    </resources>
 </document>
